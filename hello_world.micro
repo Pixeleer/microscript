@@ -1,0 +1,7 @@
+PRINT Hello world!
+
+SLEEP 5
+
+PRINT Hola mundo!
+
+CMD pause
