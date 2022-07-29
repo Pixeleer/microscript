@@ -1,7 +1,5 @@
 PRINT Hello world!
 
-SLEEP 5
+SLEEP 1
 
-PRINT Hola mundo!
-
-CMD pause
+LOOP
