@@ -50,5 +50,15 @@ def run_script(f_f):
         report_error(e, f_f)
 
 if __name__ == "__main__":
-    scr = input("")
-    run_script(scr+".micro")
+    conf_f = open("ms.conf", "r")
+    conf = conf_f.read()
+    settings = conf.split("=")
+    conf_f.close()
+    if settings[0] == "run":
+        if settings[1] == "input":
+            scr = input("-> ")
+            run_script(scr+".micro")
+        else:
+            run_script(settings[1])
+    else:
+        report_error(f"[Microscript] \"run\" config variable not set.", "ms.conf")
