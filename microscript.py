@@ -2,6 +2,7 @@ import os
 import time
 import random
 import pymsgbox
+import sys
 
 libs = []
 
@@ -57,6 +58,10 @@ if __name__ == "__main__":
     if settings[0] == "run":
         if settings[1] == "input":
             scr = input("-> ")
+            if scr == "update_dep":
+                for line in open("req.txt", 'r'):
+                    os.system(f"{sys.executable} -m pip install {line}")
+                exit()
             run_script(scr+".micro")
         else:
             run_script(settings[1])
