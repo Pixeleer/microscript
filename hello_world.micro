@@ -1,5 +1,7 @@
+// Welcome to microscript!
+
 PRINT Hello world!
 
 SLEEP 1
 
-LOOP
+LOOP // Loop
